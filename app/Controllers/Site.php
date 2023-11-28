@@ -6,14 +6,16 @@ use App\Controllers\BaseController;
 
 class Site extends BaseController
 {
-    public function index()
-    {
-        //
+    public function getMethod(){
+        echo " This is GET method";
     }
-    public function aboutUs(){
-        echo "<h2> Welcome to about us page </h2>";
+    public function postMethod(){
+        echo "This is POST METHOD";
     }
-    public function contactUs(){
-        return view("contact-us");
+    public function putMethod(){
+        echo "this is PUT method";
+    }
+    public function deleteMethod(){
+        echo "this is delete method";
     }
 }
