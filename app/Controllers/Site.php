@@ -6,16 +6,16 @@ use App\Controllers\BaseController;
 
 class Site extends BaseController
 {
-    public function getMethod(){
-        echo " This is GET method";
+    public function createMethod(){
+        echo " This is create method";
     }
-    public function postMethod(){
-        echo "This is POST METHOD";
+    public function listMethod(){
+        echo "This is list METHOD";
     }
-    public function putMethod(){
-        echo "this is PUT method";
-    }
-    public function deleteMethod(){
+    public function deleteMethod($id){
         echo "this is delete method";
+    }
+    public function updateMethod($id){
+        echo "this is update method";
     }
 }
