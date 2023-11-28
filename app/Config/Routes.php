@@ -38,4 +38,12 @@ $routes->group("user",["namespace" => "App\Controllers\User"], function ($routes
  $routes->get("method1", "UserController::method1");
 });
 
+$routes->get("route-1","Site::route1",["filter" => "myauth"]);
+$routes->get("route-2","Site::route2");
+$routes->get("route-3","Site::route3", ["filter" => "myauth"]);
+$routes->get("route-4","Site::route4");
+
+$routes->get("user-login",'Site::setUser');
+$routes->get("user-logout","Site::removeUser");
+
 // $routes->get('user-create','Home::insert');

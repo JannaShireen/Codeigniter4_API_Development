@@ -6,16 +6,25 @@ use App\Controllers\BaseController;
 
 class Site extends BaseController
 {
-    public function createMethod(){
-        echo " This is create method";
+
+    public function route1(){
+        echo "This is protected route";
     }
-    public function listMethod(){
-        echo "This is list METHOD";
+    public function route2(){
+        echo "This is an open route";
     }
-    public function deleteMethod($id){
-        echo "this is delete method";
+    public function route3(){
+        echo "This is another protected route";
     }
-    public function updateMethod($id){
-        echo "this is update method";
+    public function route4(){
+        echo "This is another open route";
+    }
+    public function setUser(){
+        $session = session();
+        $session->set("isLoggedIn",1);
+    }
+    public function removeUser(){
+        $session = session();
+        $session->remove("isLoggedIn");
     }
 }
